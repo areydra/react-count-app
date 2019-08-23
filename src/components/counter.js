@@ -5,13 +5,13 @@ class Counter extends Component {
         count : 0
     }
 
-    handleIncrement = product => {
+    handleIncrement = product => { //menggunakan arrow function agar bisa menggunakan this class Counter
         console.log(product) //product(bisa mengubah count sesuai nama product/id product)
         this.setState({ count : this.state.count + 1 }) //gunakan setState untuk melakukan operator matematika setelah eventclick, karena secara default react blm support
         //this.setState() asalnya dari class Component di module react
     }
 
-    render(){
+    render(){ //berfungsi untuk menampilkan tag html kedalam layar/browser/tampilan
         return (
             <div>
                 <span className={ this.getBadgeClasses() }>{ this.formatCount() }</span>
